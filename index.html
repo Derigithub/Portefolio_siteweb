@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derifeloli - Portefolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le CSS -->
+</head>
+<body>
+    <!-- Loader (avec logo qui rebondit) -->
+    <div id="loader">
+        <div class="loader-logo">
+            <img src="Image/Logodlr.png" alt="Logo" class="loader-logo">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <img src="Image/Logodlr.png" width="150px" height="150px">
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p> Lorem ipsum odor amet, consectetuer adipiscing elit.<br>
+            Curabitur venenatis proin vestibulum; viverra scelerisque egestas maecenas consequat elit.<br>
+            Vulputate gravida purus consectetur laoreet at duis?</p>
+        <button id="start-button">C'est parti !</button>
+    </div>
+    <!-- Bouton Mode Clair/Sombre -->
+<button id="theme-toggle" aria-label="Toggle Theme">
+    <i class="fas fa-moon"></i>
+</button>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos de moi</a></li>
+            <li><a href="#">Projets</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div class="content-layout">
+        <!-- Conteneur du texte -->
+        <div class="text-container">
+            <h1 class="title">A propos de moi</h1>
+            <p class="paragraph">
+                Lorem ipsum odor amet, consectetuer adipiscing elit.<br>
+                Curabitur venenatis proin vestibulum; viverra scelerisque egestas maecenas consequat elit.<br>
+                Vulputate gravida purus consectetur laoreet at duis?
+            </p>
+        </div>
+    
+        <!-- Conteneur de l'image -->
+        <div class="image-container">
+            <img src="Image/HiPaint_1703951756004.png" alt="Illustration de portfolio" class="responsive-image">
+        </div>
+    </div>
+    <!-- Sidebar Toggle Button -->
+    <button id="sidebar-toggle">☰</button>
+    <centre>
+    <div class="card-container">
+        <div class="card">
+            <a href="https://ko-fi.com/derifeloligraphiste" target="_blank">
+                <img src="Image/Rainbow mug.gif" alt="Ko-Fi">
+                <h3>Ko-Fi</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://github.com/Derigithub" target="_blank">
+                <img src="Image/github-mark.png" alt="GitHub">
+                <h3>GitHub</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://www.instagram.com/derifeloli_graphiste/" target="_blank">
+                <img src="Image/Instagram_logo_2016.png" alt="Instagram">
+                <h3>Instagram</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://twitch.tv/derifeloli_" target="_blank">
+                <img src="Image/glitch_flat_purple.png" alt="Twitch">
+                <h3>Twitch</h3>
+            </a>
+        </div>
+    </div>
+    </centre>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+      kofiWidgetOverlay.draw('derifeloligraphiste', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support me',
+        'floating-chat.donateButton.background-color': '#00b9fe',
+        'floating-chat.donateButton.text-color': '#fff'
+      });
+    </script>
+    <!-- Script JS -->
+    <script src="script.js"></script>
+    <br> <br>
+    <footer id="footer">
+        <div class="footer-container">
+            <!-- Liens du site -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Logo centré -->
+            <div class="footer-logo">
+                <img src="Image/Logodlr.png" alt="Logo" />
+            </div>
+    
+            <!-- Réseaux sociaux -->
+            <div class="footer-social">
+                <a href="https://ko-fi.com/derifeloligraphiste" target="_blank">
+                    <img src="Image/Rainbow mug.gif" alt="Ko-Fi">
+                </a>
+                <a href="https://github.com/Derigithub" target="_blank">
+                    <img src="Image/github-mark.png" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/derifeloli_graphiste/" target="_blank">
+                    <img src="Image/Instagram_logo_2016.png" alt="Instagram">
+                </a>
+                <a href="https://twitch.tv/derifeloli_" target="_blank">
+                    <img src="Image/glitch_flat_purple.png" alt="Twitch">
+                </a>
+            </div>
+        </div>
+        <!-- Crédits -->
+    <div class="footer-credits">
+        <p> © 2025 Derifeloli. Fait avec 💙</p>
+    </div>
+    </footer>    
+</body>
+</html>

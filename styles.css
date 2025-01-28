@@ -4,8 +4,89 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #232323;
-    background-image: url(Image/pattern_japanese-pattern-1_1_2_0-0_0_1__hsla\(0\,\ 0\,\ 100\,\ 0.00\)_hsla\(26\,\ 28\,\ 49\,\ 1.00\)\ 1.png);
+    background-image: url('Image/Fondsite.png');
+    background-repeat: no-repeat;
     overflow-x: hidden;
+    height: 100%;
+}
+hr { 
+    height: 10px;
+    background-color: #FFD7BA;
+    width: 600px;
+    align-items: center;
+}
+/* Conteneur principal pour aligner le texte et l'image */
+.content-layout {
+    display: flex;
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    justify-content: center; /* Centre l'ensemble horizontalement dans la page */
+    gap: 20px; /* Ajoute un espacement entre le paragraphe et l'image */
+    padding: 20px;
+    flex-wrap: nowrap; /* Empêche le passage des éléments à la ligne */
+}
+
+/* Conteneur pour le texte */
+.text-container {
+    flex: 1; /* Le texte prend tout l'espace disponible */
+    max-width: 60%; /* Limite la largeur du texte */
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+/* Titre centré uniquement dans son conteneur */
+.title {
+    text-align: center; /* Centre le titre dans la largeur du texte */
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Paragraphe aligné à gauche */
+.paragraph {
+    text-align: left;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Conteneur pour l'image */
+.image-container {
+    width: 300px; /* Taille fixe du conteneur */
+    height: 300px; /* Taille fixe du conteneur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Assure que le contenu ne dépasse pas */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    width: 500px;
+    height: 500px;
+}
+
+.responsive-image {
+    width: 100%; /* Adapte l'image au conteneur */
+    height: auto; /* Maintient les proportions */
+    border-radius: 50%; /* Rend l'image ronde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre douce */
+    display: block; /* Évite les espaces indésirables */
+    margin: 0 auto; /* Centre l'image dans le conteneur */
+}
+
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .content-layout {
+        flex-wrap: wrap; /* Les éléments passent en colonne */
+        gap: 10px; /* Réduit l'espacement sur petits écrans */
+        text-align: center; /* Centre le contenu pour les petits écrans */
+    }
+
+    .text-container {
+        max-width: 100%; /* Texte prend toute la largeur */
+    }
+
+    .image-container {
+        max-width: 70%; /* Réduit la taille de l'image sur petits écrans */
+        margin: 0 auto; /* Centre l'image */
+    }
 }
 
 /* Loader styles */
@@ -24,9 +105,9 @@ body, html {
 }
 
 .loader-logo {
-    width: 100px;
-    height: 100px;
-    background-color: #ffffff00;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
     border-radius: 50%;
     animation: logo-bounce 1.5s infinite ease-in-out;
 }
@@ -41,7 +122,7 @@ body, html {
 }
 
 #loader.fade-out {
-    opacity: 1;
+    opacity: 0; /* Fix : fade-out effect */
     visibility: hidden;
 }
 
@@ -56,10 +137,6 @@ h1 {
     color: #ffffff;
 }
 
-p{
-    font-size:30px;
-    color: #ffffff;
-}
 button {
     padding: 15px 30px;
     background-color: #53535c;
@@ -72,7 +149,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff0000;
+    background-color: #1100ff;
 }
 
 /* Sidebar styles */
@@ -85,9 +162,9 @@ button:hover {
     background-color: #333;
     color: white;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: left 0.3s ease;
     z-index: 1000;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
@@ -105,7 +182,6 @@ button:hover {
 }
 
 #sidebar ul li {
-    width: 100%;
     text-align: center;
 }
 
@@ -121,7 +197,6 @@ button:hover {
 #sidebar ul li a:hover {
     background-color: #007BFF;
 }
-
 
 /* Sidebar toggle button */
 #sidebar-toggle {
@@ -142,14 +217,14 @@ button:hover {
     background-color: #555;
 }
 
+/* Social media card styles */
 .card-container {
+    display: flex;
     flex-wrap: wrap;
-    display: grid;
-    align-items: center; /* Center horizontally */
-    flex-direction: row ;
-    gap: 5px;               /* Espace entre les cartes */
-    justify-content: center; /* Centre les colonnes horizontalement */
-    padding: 20px;           /* Ajoute de l'espace autour */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 .card {
@@ -183,4 +258,120 @@ button:hover {
 .card a {
     text-decoration: none;
     color: inherit;
+}
+/* Variables pour les thèmes */
+:root {
+    --bg-color: #232323;
+    --text-color: #ffffff;
+    --button-bg: #53535c;
+    --button-hover: #1100ff;
+}
+
+.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #232323;
+    --button-bg: #dddddd;
+    --button-hover: #bbbbbb;
+}
+
+/* Applique les variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Bouton thème */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--button-hover);
+}
+/* Footer global styles */
+#footer {
+    background-color: #FFD7BA;
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Liens du site */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links ul li {
+    display: inline;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #00b9fe;
+}
+
+/* Logo centré */
+.footer-logo img {
+    width: 80px;
+    height: auto;
+}
+
+/* Réseaux sociaux */
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
+/* Crédits */
+.footer-credits {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #141414;
+}
+
+.footer-credits p {
+    margin: 0;
+}
+
+.footer-credits p:hover {
+    color: #fff;
+    transition: color 0.3s ease;
 }
