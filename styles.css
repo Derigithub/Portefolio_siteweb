@@ -19,8 +19,7 @@ hr {
 .content-layout {
     display: flex;
     align-items: center; /* Aligne les éléments verticalement au centre */
-    justify-content: center; /* Centre l'ensemble horizontalement dans la page */
-    gap: 20px; /* Ajoute un espacement entre le paragraphe et l'image */
+    gap: 10px; /* Ajoute un espacement entre le paragraphe et l'image */
     padding: 20px;
     flex-wrap: nowrap; /* Empêche le passage des éléments à la ligne */
 }
